@@ -22,7 +22,7 @@ const SearchBar = ({ onSubmit }) => {
   };
 
   return (
-    <from onSubmit={onHandleSubmit}>
+    <form onSubmit={onHandleSubmit}>
       <input
         type="text"
         value={name}
@@ -30,10 +30,9 @@ const SearchBar = ({ onSubmit }) => {
         autoFocus
         placeholder="Please, enter movie name"
         onChange={onHandleChange}
-      >
-        <button type="submit">Search</button>
-      </input>
-    </from>
+      ></input>
+      <button type="submit">Search</button>
+    </form>
   );
 };
 
