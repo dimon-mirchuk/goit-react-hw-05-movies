@@ -24,19 +24,19 @@ const MoviesPage = () => {
 
   useEffect(() => {
     if (!searchQuery) {
+      setMovies([]);
       return;
     }
     getSearchMovie(searchQuery)
-      .then((data) => {
-        // if (data.results.length === 0) {
-        //   toast.error(`There are no movies on your request "${searchQuery}"`);
-        //   setMovies([]);
-        // }
+      .then(({ data }) => {
+        if (data.results.length === 0) {
+          toast.error(`There are no movies on your request "${searchQuery}"`);
+          setMovies([]);
+        }
         setMovies(data.results);
       })
       .catch((error) =>
-        // toast.error("Woops, something went wrong... Try again later.")
-        console.log(error)
+        toast.error("Woops, something went wrong... Try again later.")
       );
   }, [searchQuery]);
 

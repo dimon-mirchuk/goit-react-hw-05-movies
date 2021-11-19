@@ -8,3 +8,6 @@ export const getTrendingMovies = () =>
 
 export const getSearchMovie = (query) =>
   axios.get(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${query}`);
+
+export const getMovieById = (movieId) =>
+  axios.get(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`);
