@@ -1,19 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense, lazy } from "react";
 import {
   useHistory,
   useLocation,
   useParams,
-  //   useRouteMatch,
-} from "react-router";
+  useRouteMatch,
+  Switch,
+  Route,
+  NavLink,
+} from "react-router-dom";
 import { toast } from "react-toastify";
 import { getMovieById } from "../../services/ServiceAPI";
 import noImage from "../../images/notFound.png";
+
+const Cast = lazy(() => import("../Cast" /* webpackChunkName: "Cast" */));
+const Reviews = lazy(() =>
+  import("../Reviews" /* webpackChunkName: "Reviews" */)
+);
 
 const MovieDetails = () => {
   const history = useHistory();
   const location = useLocation();
   const { movieId } = useParams();
-  //   const { url, path } = useRouteMatch();
+  const { url, path } = useRouteMatch();
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {
@@ -63,6 +71,29 @@ const MovieDetails = () => {
       <p>Vote average: {movie.vote_average}</p>
       <h3>Overview</h3>
       <p>{movie.overview}</p>
+      <nav>
+        <p>Additional information</p>
+        <NavLink
+          to={{ pathname: `${url}/cast`, state: { from: { location } } }}
+        >
+          Cast
+        </NavLink>
+        <NavLink
+          to={{ pathname: `${url}/reviews`, state: { from: { location } } }}
+        >
+          Reviews
+        </NavLink>
+      </nav>
+      <Suspense fallback={<h2>LOADING...</h2>}>
+        <Switch>
+          <Route path={`${path}:movieId/cast`}>
+            <Cast movieId={movieId} />
+          </Route>
+          <Route path={`${path}:movieId/reviews`}>
+            <Reviews movieId={movieId} />
+          </Route>
+        </Switch>
+      </Suspense>
     </>
   );
 };

@@ -8,16 +8,16 @@ import "react-toastify/dist/ReactToastify.css";
 // import MovieDetailsPage from "../views/MovieDetailsPage";
 
 const Navigation = lazy(() =>
-  import("./Navigation" /* webpackChunkName "Navigation" */)
+  import("./Navigation" /* webpackChunkName: "Navigation" */)
 );
 const HomePage = lazy(() =>
-  import("../views/HomePage" /* webpackChunkName "HomePage" */)
+  import("../views/HomePage" /* webpackChunkName: "HomePage" */)
 );
 const MoviesPage = lazy(() =>
-  import("../views/MoviesPage" /* webpackChunkName "MoviesPage" */)
+  import("../views/MoviesPage" /* webpackChunkName: "MoviesPage" */)
 );
 const MovieDetailsPage = lazy(() =>
-  import("../views/MovieDetailsPage" /* webpackChunkName "MovieDetailsPage" */)
+  import("../views/MovieDetailsPage" /* webpackChunkName: "MovieDetailsPage" */)
 );
 
 function App() {
