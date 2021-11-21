@@ -3,7 +3,7 @@ import {
   NavLink,
   useHistory,
   useLocation,
-  useRouteMatch,
+  // useRouteMatch,
 } from "react-router-dom";
 import { toast } from "react-toastify";
 import { getSearchMovie } from "../../services/ServiceAPI";
@@ -14,7 +14,7 @@ const MoviesPage = () => {
   const history = useHistory();
   const location = useLocation();
   const [movies, setMovies] = useState(null);
-  const { url } = useRouteMatch;
+  // const { url } = useRouteMatch;
 
   const searchQuery = new URLSearchParams(location.search).get("query") ?? "";
 
@@ -24,7 +24,7 @@ const MoviesPage = () => {
 
   useEffect(() => {
     if (!searchQuery) {
-      setMovies([]);
+      // setMovies([]);
       return;
     }
     getSearchMovie(searchQuery)
@@ -49,8 +49,8 @@ const MoviesPage = () => {
             <li key={movie.id}>
               <NavLink
                 to={{
-                  pathname: `${url}/${movie.id}`,
-                  state: { from: { location } },
+                  pathname: `/movies/${movie.id}`,
+                  state: { from: location },
                 }}
               >
                 <img

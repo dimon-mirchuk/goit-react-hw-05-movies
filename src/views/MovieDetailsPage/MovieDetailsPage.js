@@ -14,13 +14,11 @@ const MovieDetails = () => {
   const location = useLocation();
   const { movieId } = useParams();
   //   const { url, path } = useRouteMatch();
-  const [movie, setMovie] = useState(null);
+  const [movie, setMovie] = useState([]);
 
   useEffect(() => {
-    console.log(movieId);
     getMovieById(movieId)
       .then(({ data }) => {
-        console.log(data);
         setMovie(data);
       })
       .catch((error) =>
@@ -28,10 +26,13 @@ const MovieDetails = () => {
       );
   }, [movieId]);
 
-  console.log(movie);
-
   const onGoBack = () => {
-    history.push(location?.state?.from?.location ?? "/movies");
+    console.log(location.state.from);
+    if (location.state?.from.location) {
+      history.push(location.state.from.location);
+      return;
+    }
+    history.push(location.state.from);
   };
 
   return (

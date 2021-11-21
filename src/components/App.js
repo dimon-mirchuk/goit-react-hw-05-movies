@@ -1,26 +1,42 @@
+import { Suspense, lazy } from "react";
 import { Switch, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Navigation from "./Navigation";
-import HomePage from "../views/HomePage";
-import MoviesPage from "../views/MoviesPage";
-import MovieDetailsPage from "../views/MovieDetailsPage";
+// import Navigation from "./Navigation";
+// import HomePage from "../views/HomePage";
+// import MoviesPage from "../views/MoviesPage";
+// import MovieDetailsPage from "../views/MovieDetailsPage";
+
+const Navigation = lazy(() =>
+  import("./Navigation" /* webpackChunkName "Navigation" */)
+);
+const HomePage = lazy(() =>
+  import("../views/HomePage" /* webpackChunkName "HomePage" */)
+);
+const MoviesPage = lazy(() =>
+  import("../views/MoviesPage" /* webpackChunkName "MoviesPage" */)
+);
+const MovieDetailsPage = lazy(() =>
+  import("../views/MovieDetailsPage" /* webpackChunkName "MovieDetailsPage" */)
+);
 
 function App() {
   return (
     <>
-      <Navigation />
-      <Switch>
-        <Route path="/" exact>
-          <HomePage />
-        </Route>
-        <Route path="/movies" exact>
-          <MoviesPage />
-        </Route>
-        <Route path="/movies/:movieId">
-          <MovieDetailsPage />
-        </Route>
-      </Switch>
+      <Suspense fallback={<h2>LOADING...</h2>}>
+        <Navigation />
+        <Switch>
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
+          <Route path="/movies" exact>
+            <MoviesPage />
+          </Route>
+          <Route path="/movies/:movieId">
+            <MovieDetailsPage />
+          </Route>
+        </Switch>
+      </Suspense>
       <ToastContainer />
     </>
   );

@@ -15,7 +15,7 @@ const HomePage = () => {
       .catch((error) =>
         toast.error("Woops, something went wrong... Try again later.")
       );
-  });
+  }, []);
 
   return (
     <>
