@@ -1,10 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  NavLink,
-  useHistory,
-  useLocation,
-  // useRouteMatch,
-} from "react-router-dom";
+import { NavLink, useHistory, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 import { getSearchMovie } from "../../services/ServiceAPI";
 import SearchBar from "../../components/SearchBar";
@@ -14,7 +9,6 @@ const MoviesPage = () => {
   const history = useHistory();
   const location = useLocation();
   const [movies, setMovies] = useState(null);
-  // const { url } = useRouteMatch;
 
   const searchQuery = new URLSearchParams(location.search).get("query") ?? "";
 
@@ -24,7 +18,6 @@ const MoviesPage = () => {
 
   useEffect(() => {
     if (!searchQuery) {
-      // setMovies([]);
       return;
     }
     getSearchMovie(searchQuery)
@@ -45,24 +38,24 @@ const MoviesPage = () => {
       <SearchBar onSubmit={onChangeQuery} />
       {movies && (
         <ul>
-          {movies.map((movie) => (
-            <li key={movie.id}>
+          {movies.map(({ id, poster_path, title }) => (
+            <li key={id}>
               <NavLink
                 to={{
-                  pathname: `/movies/${movie.id}`,
+                  pathname: `/movies/${id}`,
                   state: { from: location },
                 }}
               >
                 <img
                   src={
-                    movie.poster_path
-                      ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
+                    poster_path
+                      ? `https://image.tmdb.org/t/p/w500/${poster_path}`
                       : noImage
                   }
-                  alt={movie.title}
+                  alt={title}
                   width="320"
                 />
-                <p>{movie.title}</p>
+                <p>{title}</p>
               </NavLink>
             </li>
           ))}

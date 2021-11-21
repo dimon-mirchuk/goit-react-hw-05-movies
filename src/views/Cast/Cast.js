@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
+import PropTypes from "prop-types";
 import { getMovieCast } from "../../services/ServiceAPI";
 import noImage from "../../images/notFound.png";
 
@@ -23,26 +24,30 @@ const Cast = ({ movieId }) => {
     <>
       {cast && (
         <ul>
-          {cast.map((item) => (
-            <li key={item.id}>
+          {cast.map(({ id, profile_path, name, character }) => (
+            <li key={id}>
               <img
                 src={
-                  item.profile_path
-                    ? `https://image.tmdb.org/t/p/w300/${item.profile_path}`
+                  profile_path
+                    ? `https://image.tmdb.org/t/p/w300/${profile_path}`
                     : noImage
                 }
-                alt={item.name}
+                alt={name}
                 width="100"
                 height="150"
               />
-              <p>{item.name}</p>
-              <p>{item.character}</p>
+              <p>{name}</p>
+              <p>{character}</p>
             </li>
           ))}
         </ul>
       )}
     </>
   );
+};
+
+Cast.propTypes = {
+  movieId: PropTypes.string.isRequired,
 };
 
 export default Cast;

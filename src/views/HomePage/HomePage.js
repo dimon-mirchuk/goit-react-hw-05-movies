@@ -24,23 +24,23 @@ const HomePage = () => {
           <h1>Trending today</h1>
 
           <ul>
-            {movies.map((movie) => (
-              <li key={movie.id}>
+            {movies.map(({ id, poster_path, title }) => (
+              <li key={id}>
                 <Link
                   to={{
-                    pathname: `${url}movies/${movie.id}`,
+                    pathname: `${url}movies/${id}`,
                     state: { from: { location } },
                   }}
                 >
                   <img
                     src={
-                      movie.poster_path
-                        ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
+                      poster_path
+                        ? `https://image.tmdb.org/t/p/w500/${poster_path}`
                         : noImage
                     }
-                    alt={movie.title}
+                    alt={title}
                   />
-                  <p>{movie.title}</p>
+                  <p>{title}</p>
                 </Link>
               </li>
             ))}

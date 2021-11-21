@@ -43,6 +43,8 @@ const MovieDetails = () => {
     history.push(location.state.from);
   };
 
+  const { poster_path, title, genres, vote_average, overview } = movie;
+
   return (
     <>
       <button type="button" onClick={onGoBack}>
@@ -50,27 +52,27 @@ const MovieDetails = () => {
       </button>
       <img
         src={
-          movie.poster_path
-            ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
+          poster_path
+            ? `https://image.tmdb.org/t/p/w500/${poster_path}`
             : noImage
         }
-        alt={movie.title}
+        alt={title}
         width="250"
       />
-      <h1>{movie.title}</h1>
-      {movie.genres && (
+      <h1>{title}</h1>
+      {genres && (
         <>
-          <h3>Genres</h3>
           <ul>
-            {movie.genres.map((genre) => (
-              <li key={genre.id}>{genre.name}</li>
+            <p>User Score: {vote_average * 10}%</p>
+            <h2>Overview</h2>
+            <p>{overview}</p>
+            <h3>Genres</h3>
+            {genres.map(({ id, name }) => (
+              <li key={id}>{name}</li>
             ))}
           </ul>
         </>
       )}
-      <p>Vote average: {movie.vote_average}</p>
-      <h3>Overview</h3>
-      <p>{movie.overview}</p>
       <nav>
         <p>Additional information</p>
         <NavLink

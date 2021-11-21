@@ -24,11 +24,11 @@ const Reviews = ({ movieId }) => {
     <>
       {reviews.length > 0 ? (
         <ul>
-          {reviews.map((item) => (
-            <li key={item.id}>
-              <h2>{`Author:${item.author}`}</h2>
+          {reviews.map(({ id, author, content }) => (
+            <li key={id}>
+              <h3>{`Author: ${author}`}</h3>
               <ShowMore
-                text={item.content}
+                text={content}
                 length={500}
                 showMoreLabel=" Show more >>"
                 showLessLabel=" Show less <<"
