@@ -1,0 +1,24 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.navigationList {
+  display: flex;
+}
+
+.navigationItem {
+  margin-left: 20px;
+  font-size: 24px;
+}
+
+.navigationItem:hover {
+  color: #fff;
+}
+
+.navigationItemActive {
+  composes: navigationItem;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}

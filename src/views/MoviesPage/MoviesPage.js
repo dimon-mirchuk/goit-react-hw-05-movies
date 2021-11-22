@@ -34,7 +34,7 @@ const MoviesPage = () => {
   }, [searchQuery]);
 
   return (
-    <>
+    <section>
       <SearchBar onSubmit={onChangeQuery} />
       {movies && (
         <ul>
@@ -61,7 +61,7 @@ const MoviesPage = () => {
           ))}
         </ul>
       )}
-    </>
+    </section>
   );
 };
 

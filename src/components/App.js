@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 import { Switch, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Spinner from "./Spinner";
 
 const Navigation = lazy(() =>
   import("./Navigation" /* webpackChunkName: "Navigation" */)
@@ -19,7 +20,7 @@ const MovieDetailsPage = lazy(() =>
 function App() {
   return (
     <>
-      <Suspense fallback={<h2>LOADING...</h2>}>
+      <Suspense fallback={<Spinner />}>
         <Navigation />
         <Switch>
           <Route path="/" exact>

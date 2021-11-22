@@ -11,6 +11,7 @@ import {
 import { toast } from "react-toastify";
 import { getMovieById } from "../../services/ServiceAPI";
 import noImage from "../../images/notFound.png";
+import Spinner from "../../components/Spinner";
 
 const Cast = lazy(() => import("../Cast" /* webpackChunkName: "Cast" */));
 const Reviews = lazy(() =>
@@ -46,7 +47,7 @@ const MovieDetails = () => {
   const { poster_path, title, genres, vote_average, overview } = movie;
 
   return (
-    <>
+    <section>
       <button type="button" onClick={onGoBack}>
         Go Back
       </button>
@@ -68,7 +69,9 @@ const MovieDetails = () => {
             <p>{overview}</p>
             <h3>Genres</h3>
             {genres.map(({ id, name }) => (
-              <li key={id}>{name}</li>
+              <li key={id}>
+                <p>{name}</p>
+              </li>
             ))}
           </ul>
         </>
@@ -86,7 +89,7 @@ const MovieDetails = () => {
           Reviews
         </NavLink>
       </nav>
-      <Suspense fallback={<h2>LOADING...</h2>}>
+      <Suspense fallback={<Spinner />}>
         <Switch>
           <Route path={`${path}:movieId/cast`}>
             <Cast movieId={movieId} />
@@ -96,7 +99,7 @@ const MovieDetails = () => {
           </Route>
         </Switch>
       </Suspense>
-    </>
+    </section>
   );
 };
 

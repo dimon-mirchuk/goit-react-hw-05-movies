@@ -18,7 +18,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <>
+    <section>
       {movies && (
         <>
           <h1>Trending today</h1>
@@ -47,7 +47,7 @@ const HomePage = () => {
           </ul>
         </>
       )}
-    </>
+    </section>
   );
 };
 
