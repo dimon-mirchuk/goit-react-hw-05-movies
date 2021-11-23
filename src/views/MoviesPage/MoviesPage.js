@@ -4,6 +4,9 @@ import { toast } from "react-toastify";
 import { getSearchMovie } from "../../services/ServiceAPI";
 import SearchBar from "../../components/SearchBar";
 import noImage from "../../images/notFound.png";
+import styles from "./MoviesPage.module.css";
+
+const { filmList, filmItem, filmTitle } = styles;
 
 const MoviesPage = () => {
   const history = useHistory();
@@ -37,9 +40,9 @@ const MoviesPage = () => {
     <section>
       <SearchBar onSubmit={onChangeQuery} />
       {movies && (
-        <ul>
+        <ul className={filmList}>
           {movies.map(({ id, poster_path, title }) => (
-            <li key={id}>
+            <li key={id} className={filmItem}>
               <NavLink
                 to={{
                   pathname: `/movies/${id}`,
@@ -53,9 +56,8 @@ const MoviesPage = () => {
                       : noImage
                   }
                   alt={title}
-                  width="320"
                 />
-                <p>{title}</p>
+                <p className={filmTitle}>{title}</p>
               </NavLink>
             </li>
           ))}

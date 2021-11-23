@@ -1,10 +1,81 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="50" viewBox="0 0 400 400" xml:space="preserve">
-<desc>Created with Fabric.js 3.6.2</desc>
-<defs>
-</defs>
-<g transform="matrix(4.98 0 0 4.98 200 200)" id="Layer_2"  >
-<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(234,0,66); fill-rule: nonzero; opacity: 1;"  transform=" translate(-32.07, -32.03)" d="M 33 18 h 15.2 c 0.9 0 1.7 -0.6 1.9 -1.5 l 0 0 l 2 -9.6 C 52.4 5.3 51.1 4 49.9 4 H 17 c -2.7 0 -5 2.2 -5 5 v 49.8 c 0 1.2 1.5 1.7 2.2 0.8 c 3.8 -4.8 11.3 -14.3 12.4 -15.6 c 1.5 -1.8 2 -1.9 4.4 -1.9 h 11.8 c 1.4 0 2.3 -1.1 2.4 -1.9 c 0.2 -0.8 1.7 -8.3 2 -9.8 l 0 0 c 0.2 -1.2 -0.7 -2.3 -1.9 -2.3 H 33 c -2.8 0 -5 -2.2 -5 -5 S 30.2 18 33 18 z" stroke-linecap="round" />
-</g>
+<svg width="134" height="54" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="56" width="136" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="1" x="1" height="26" width="67"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <desc transform="matrix(0.011736145226516614,0,0,0.011736145226516614,0,0) ">Created with Fabric.js 3.6.2</desc>
+
+  <g id="svg_7">
+   <g id="svg_4" transform="matrix(0.05844600322805274,0,0,0.05844600322805274,2.3472290453033153,2.3472290453033153) "/>
+  </g>
+  <desc transform="matrix(0.011736145226516614,0,0,0.011736145226516614,0,0) ">Created with Fabric.js 3.6.2</desc>
+
+  <g id="svg_14"/>
+  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+  <g stroke="null" id="svg_52">
+   <g stroke="null" transform="matrix(0.11417443861359156,0,0,0.11625141977673212,-0.09783302205498501,-0.13164465768386435) " id="svg_49">
+    <title stroke="null" transform="translate(5141.25537109375,-1617.1844482421875) translate(954.679443359375,1092.459716796875) translate(1263.3514404296875,933.1917114257812) translate(-76.54512023925781,-147.46365356445312) translate(8.758527755737305,8.602045059204102) translate(-0.8891907334327698,-7.859737396240234) translate(0.8891907334327698,0) translate(0.8891907334327698,0) translate(0.889190673828125,0) translate(-7.113525867462158,-32.312255859375) translate(0,0.8733042478561401) translate(0.8671814799308777,0) translate(0.8671814799308777,0.8516882061958313) translate(-0.8671814799308777,0) translate(0,9.368569374084473) translate(-103.43745422363281,-91.68319702148438) translate(107.70496368408203,0) translate(0,96.79476165771484) ">background</title>
+    <g stroke="null" id="svg_46" display="none">
+     <rect stroke="null" id="svg_50" width="67" height="50" x="7291.299209" y="245.638505" stroke-width="0" fill="url(#gridpattern)"/>
+    </g>
+   </g>
+   <g stroke="null" transform="matrix(0.19324636160324796,0,0,0.22859296529429068,-1.399397939627846,-4.014795946051697) " id="svg_51">
+    <title stroke="null" transform="translate(3037.572998046875,-822.4224243164062) translate(564.0468139648438,555.5726318359375) translate(746.4174194335938,474.5765686035156) translate(-45.22463607788086,-74.9929428100586) translate(0,1.470449686050415) translate(0.8697044849395752,0) translate(8.758527755737305,8.332149505615234) translate(-0.8891907334327698,-7.613131999969482) translate(0.8891907334327698,0) translate(0.8891907334327698,0) translate(4.445953369140625,9.304938316345215) translate(0.889190673828125,0) translate(-7.113525867462158,-31.298433303833008) translate(0,0.8459035754203796) translate(0,0.8459035754203796) translate(0.8891907334327698,0) translate(2.667572259902954,0) translate(-0.8891907334327698,23.685300827026367) translate(-3.4687259197235107,-1.64993155002594) translate(0.8671814799308777,0.82496577501297) translate(3.4687259197235107,1.64993155002594) translate(-1.7343629598617554,-90.7462387084961) translate(0.8671814799308777,0.8516882061958313) translate(-0.8671814799308777,0) translate(0,9.368569374084473) translate(-103.43745422363281,-91.68319702148438) translate(107.70496368408203,0) translate(0,96.79476165771484) ">Layer 1</title>
+    <desc stroke="null" transform="translate(3037.572998046875,-822.4224243164062) translate(564.0468139648438,555.5726318359375) translate(746.4174194335938,474.5765686035156) translate(-45.22463607788086,-74.9929428100586) translate(0,1.470449686050415) translate(0.8697044849395752,0) translate(8.758527755737305,8.332149505615234) translate(-0.8891907334327698,-7.613131999969482) translate(0.8891907334327698,0) translate(0.8891907334327698,0) translate(4.445953369140625,9.304938316345215) translate(0.889190673828125,0) translate(-7.113525867462158,-31.298433303833008) translate(0,0.8459035754203796) translate(0,0.8459035754203796) translate(0.8891907334327698,0) translate(2.667572259902954,0) translate(-0.8891907334327698,23.685300827026367) translate(-3.4687259197235107,-1.64993155002594) translate(0.8671814799308777,0.82496577501297) translate(3.4687259197235107,1.64993155002594) translate(-1.7343629598617554,-90.7462387084961) translate(0.8671814799308777,0.8516882061958313) translate(-0.8671814799308777,0) translate(0,9.368569374084473) translate(-103.43745422363281,-91.68319702148438) translate(107.70496368408203,0) translate(0,96.79476165771484) ">Created with Fabric.js 3.6.2</desc>
+    <g stroke="null" id="svg_43">
+     <g stroke="null" transform="matrix(3.3931282576115267,0,0,3.7106338112967556,-1570.0557686375494,-1086.6714219736166) " id="svg_44">
+      <path stroke=" none" d="m1757.353654,349.792245l15.2,0c0.9,0 1.7,-0.6 1.9,-1.5l0,0l2,-9.6c0.3,-1.60001 -1,-2.9 -2.2,-2.9l-32.9,0c-2.7,0 -5,2.2 -5,5l0,49.8c0,1.2 1.5,1.7 2.2,0.8c3.8,-4.8 11.3,-14.3 12.4,-15.6c1.5,-1.8 2,-1.9 4.4,-1.9l11.8,0c1.4,0 2.3,-1.1 2.4,-1.9c0.2,-0.8 1.7,-8.3 2,-9.8l0,0c0.2,-1.2 -0.7,-2.3 -1.9,-2.3l-12.3,0c-2.8,0 -5,-2.2 -5,-5s2.2,-5.1 5,-5.1z" stroke-linecap="round" id="svg_45" fill="#ea0042"/>
+     </g>
+    </g>
+    <text stroke="#000" fill="#ea0042" stroke-width="0" x="994.051771" y="288.959828" id="svg_42" font-size="24" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" transform="matrix(5.1244012047644425,0,0,5.209273186470879,-657.1893646155811,-1138.5513804629081) ">ilmoteka</text>
+   </g>
+  </g>
+  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+  <g stroke="null" id="svg_87">
+   <g stroke="null" transform="matrix(1.9236824713014775,0,0,1.7790640251432306,-1716.0974615871332,-640.2297044196459) " id="svg_84">
+    <title stroke="null" transform="translate(893.4815673828125,0) translate(0,361.0832824707031) ">background</title>
+    <rect stroke="null" x="892.481567" y="360.083282" width="69" height="28" id="svg_82" fill="none"/>
+    <g stroke="null" id="svg_81" display="none">
+     <rect stroke="null" id="svg_85" width="134" height="54" x="893.481567" y="361.083282" stroke-width="0" fill="url(#gridpattern)"/>
+    </g>
+   </g>
+   <g stroke="null" transform="matrix(2.026275102794208,0,0,1.8504761375712107,-1807.6508562276235,-665.9678063096986) " id="svg_86">
+    <title stroke="null" transform="translate(0,-5.684341886080802e-14) translate(-2.0337893962860107,-1.1435394287109375) translate(0.08135157823562622,0) translate(893.4815673828125,0) translate(0,361.0832824707031) ">Layer 1</title>
+    <desc stroke="null" transform="translate(0,-5.684341886080802e-14) translate(-2.0337893962860107,-1.1435394287109375) translate(0.08135157823562622,0) translate(893.4815673828125,0) translate(0,361.0832824707031) ">Created with Fabric.js 3.6.2</desc>
+    <g stroke="null" id="svg_79">
+     <g stroke="null" transform="matrix(0.05844600322805274,0,0,0.05844600322805274,2.3472290453033153,2.3472290453033153) " id="svg_80"/>
+    </g>
+    <desc stroke="null" transform="translate(0,-5.684341886080802e-14) translate(-2.0337893962860107,-1.1435394287109375) translate(0.08135157823562622,0) translate(893.4815673828125,0) translate(0,361.0832824707031) ">Created with Fabric.js 3.6.2</desc>
+    <g stroke="null" id="svg_78"/>
+    <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+    <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+    <g stroke="null" id="svg_69">
+     <g stroke="null" id="svg_75" transform="matrix(0.11417443861359156,0,0,0.11625141977673212,-0.09783302205498501,-0.13164465768386435) ">
+      <title stroke="null" transform="translate(0,-4.89164264649844e-13) translate(-17.81300163269043,-9.83677864074707) translate(0.7125200629234314,0) translate(7825.5830078125,0) translate(0,3106.054931640625) ">background</title>
+      <g stroke="null" display="none" id="svg_76">
+       <rect stroke="null" fill="url(#gridpattern)" stroke-width="0" y="3072.251286" x="7808.282072" height="50" width="67" id="svg_77"/>
+      </g>
+     </g>
+     <g stroke="null" id="svg_70" transform="matrix(0.11417443861359156,0,0,0.12001705252996514,-0.09783302205498501,-1.4387254381965342) ">
+      <title stroke="null" transform="translate(0,-4.742872761198669e-13) translate(-17.81300163269043,-9.528141021728516) translate(0.7125200629234314,0) translate(7825.5830078125,0) translate(0,3008.599853515625) ">Layer 1</title>
+      <desc stroke="null" transform="translate(0,-4.742872761198669e-13) translate(-17.81300163269043,-9.528141021728516) translate(0.7125200629234314,0) translate(7825.5830078125,0) translate(0,3008.599853515625) ">Created with Fabric.js 3.6.2</desc>
+      <g stroke="null" id="svg_72">
+       <g stroke="null" id="svg_73" transform="matrix(3.3931282576115267,0,0,3.7106338112967556,-1570.0557686375494,-1086.6714219736166) ">
+        <path stroke=" none" fill="#ea0042" id="svg_74" stroke-linecap="round" d="m2787.683509,1119.588946l15.2,0c0.9,0 1.7,-0.6 1.9,-1.5l0,0l2,-9.6c0.3,-1.60001 -1,-2.9 -2.2,-2.9l-32.9,0c-2.7,0 -5,2.2 -5,5l0,49.8c0,1.2 1.5,1.7 2.2,0.8c3.8,-4.8 11.3,-14.3 12.4,-15.6c1.5,-1.8 2,-1.9 4.4,-1.9l11.8,0c1.4,0 2.3,-1.1 2.4,-1.9c0.2,-0.8 1.7,-8.3 2,-9.8l0,0c0.2,-1.2 -0.7,-2.3 -1.9,-2.3l-12.3,0c-2.8,0 -5,-2.2 -5,-5s2.2,-5.1 5,-5.1z"/>
+       </g>
+      </g>
+      <text stroke="#000" transform="matrix(5.1244012047644425,0,0,5.209273186470879,-657.1893646155811,-1138.5513804629081) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_71" y="837.315649" x="1676.28596" stroke-width="0" fill="#ea0042">ilmoteka</text>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
 </svg>

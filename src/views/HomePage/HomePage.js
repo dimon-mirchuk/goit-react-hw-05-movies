@@ -3,6 +3,9 @@ import { Link, useRouteMatch, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 import { getTrendingMovies } from "../../services/ServiceAPI";
 import noImage from "../../images/notFound.png";
+import styles from "./HomePage.module.css";
+
+const { title, filmList, filmItem, filmTitle } = styles;
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
@@ -21,11 +24,11 @@ const HomePage = () => {
     <section>
       {movies && (
         <>
-          <h1>Trending today</h1>
+          <h1 className={title}>Trending today</h1>
 
-          <ul>
+          <ul className={filmList}>
             {movies.map(({ id, poster_path, title }) => (
-              <li key={id}>
+              <li key={id} className={filmItem}>
                 <Link
                   to={{
                     pathname: `${url}movies/${id}`,
@@ -40,7 +43,7 @@ const HomePage = () => {
                     }
                     alt={title}
                   />
-                  <p>{title}</p>
+                  <p className={filmTitle}>{title}</p>
                 </Link>
               </li>
             ))}

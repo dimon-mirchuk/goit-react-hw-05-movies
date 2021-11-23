@@ -12,6 +12,9 @@ import { toast } from "react-toastify";
 import { getMovieById } from "../../services/ServiceAPI";
 import noImage from "../../images/notFound.png";
 import Spinner from "../../components/Spinner";
+import styles from "./MoviesDetailsPage.module.css";
+
+const { filmContainer, goBackBtn, section } = styles;
 
 const Cast = lazy(() => import("../Cast" /* webpackChunkName: "Cast" */));
 const Reviews = lazy(() =>
@@ -47,35 +50,39 @@ const MovieDetails = () => {
   const { poster_path, title, genres, vote_average, overview } = movie;
 
   return (
-    <section>
-      <button type="button" onClick={onGoBack}>
+    <section className={section}>
+      <button type="button" onClick={onGoBack} className={goBackBtn}>
         Go Back
       </button>
-      <img
-        src={
-          poster_path
-            ? `https://image.tmdb.org/t/p/w500/${poster_path}`
-            : noImage
-        }
-        alt={title}
-        width="250"
-      />
-      <h1>{title}</h1>
-      {genres && (
-        <>
-          <ul>
-            <p>User Score: {vote_average * 10}%</p>
-            <h2>Overview</h2>
-            <p>{overview}</p>
-            <h3>Genres</h3>
-            {genres.map(({ id, name }) => (
-              <li key={id}>
-                <p>{name}</p>
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
+      <div className={filmContainer}>
+        <img
+          src={
+            poster_path
+              ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+              : noImage
+          }
+          alt={title}
+          width="250"
+        />
+        <div>
+          <h1>{title}</h1>
+          <p>User Score: {vote_average * 10}%</p>
+          <h2>Overview</h2>
+          <p>{overview}</p>
+          {genres && (
+            <>
+              <h3>Genres</h3>
+              <ul>
+                {genres.map(({ id, name }) => (
+                  <li key={id}>
+                    <p>{name}</p>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
+      </div>
       <nav>
         <p>Additional information</p>
         <NavLink

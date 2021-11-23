@@ -1,11 +1,17 @@
 .navigation {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   padding: 20px 0;
+  border-bottom: 1px solid rgb(234, 0, 66);
+}
+
+.logo {
+  margin-right: 20px;
 }
 
 .navigationList {
   display: flex;
+  margin-bottom: 5px;
 }
 
 .navigationItem {
@@ -20,5 +26,5 @@
 .navigationItemActive {
   composes: navigationItem;
   color: #fff;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid rgb(234, 0, 66);
 }

@@ -2,13 +2,18 @@ import { Link, NavLink } from "react-router-dom";
 import styles from "./Navigation.module.css";
 import { ReactComponent as Logo } from "../../images/logo.svg";
 
-const { navigation, navigationList, navigationItem, navigationItemActive } =
-  styles;
+const {
+  navigation,
+  logo,
+  navigationList,
+  navigationItem,
+  navigationItemActive,
+} = styles;
 
 const Navigation = () => (
   <header>
     <nav className={navigation}>
-      <Link to="/">
+      <Link to="/" className={logo}>
         <Logo />
       </Link>
       <ul className={navigationList}>
