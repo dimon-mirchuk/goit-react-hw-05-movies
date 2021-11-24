@@ -3,6 +3,9 @@ import { toast } from "react-toastify";
 import PropTypes from "prop-types";
 import { getMovieCast } from "../../services/ServiceAPI";
 import noImage from "../../images/notFound.png";
+import styles from "./Cast.module.css";
+
+const { castList, castItem, castInformation } = styles;
 
 const Cast = ({ movieId }) => {
   const [cast, setCast] = useState(null);
@@ -23,9 +26,9 @@ const Cast = ({ movieId }) => {
   return (
     <>
       {cast && (
-        <ul>
+        <ul className={castList}>
           {cast.map(({ id, profile_path, name, character }) => (
-            <li key={id}>
+            <li key={id} className={castItem}>
               <img
                 src={
                   profile_path
@@ -33,11 +36,9 @@ const Cast = ({ movieId }) => {
                     : noImage
                 }
                 alt={name}
-                width="100"
-                height="150"
               />
-              <p>{name}</p>
-              <p>{character}</p>
+              <p className={castInformation}>{name}</p>
+              <p className={castInformation}>{character}</p>
             </li>
           ))}
         </ul>

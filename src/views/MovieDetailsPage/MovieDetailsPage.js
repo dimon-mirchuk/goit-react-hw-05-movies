@@ -9,12 +9,27 @@ import {
   NavLink,
 } from "react-router-dom";
 import { toast } from "react-toastify";
+import { animateScroll as scroll } from "react-scroll";
 import { getMovieById } from "../../services/ServiceAPI";
 import noImage from "../../images/notFound.png";
 import Spinner from "../../components/Spinner";
 import styles from "./MoviesDetailsPage.module.css";
 
-const { filmContainer, goBackBtn, section } = styles;
+const {
+  filmContainer,
+  goBackBtn,
+  section,
+  filmDescription,
+  filmTitle,
+  filmText,
+  userSore,
+  filmCaption,
+  navigationTitle,
+  navigationList,
+  navigationItem,
+  navigationItemActive,
+  navigation,
+} = styles;
 
 const Cast = lazy(() => import("../Cast" /* webpackChunkName: "Cast" */));
 const Reviews = lazy(() =>
@@ -62,16 +77,18 @@ const MovieDetails = () => {
               : noImage
           }
           alt={title}
-          width="250"
+          width="350"
         />
-        <div>
-          <h1>{title}</h1>
-          <p>User Score: {vote_average * 10}%</p>
-          <h2>Overview</h2>
-          <p>{overview}</p>
+        <div className={filmDescription}>
+          <h1 className={filmTitle}>{title}</h1>
+          <p className={filmText}>
+            <span className={userSore}>User Score:</span> {vote_average * 10}%
+          </p>
+          <h2 className={filmCaption}>Overview</h2>
+          <p className={filmText}>{overview}</p>
           {genres && (
             <>
-              <h3>Genres</h3>
+              <h3 className={filmCaption}>Genres</h3>
               <ul>
                 {genres.map(({ id, name }) => (
                   <li key={id}>
@@ -83,18 +100,36 @@ const MovieDetails = () => {
           )}
         </div>
       </div>
-      <nav>
-        <p>Additional information</p>
-        <NavLink
-          to={{ pathname: `${url}/cast`, state: { from: { location } } }}
-        >
-          Cast
-        </NavLink>
-        <NavLink
-          to={{ pathname: `${url}/reviews`, state: { from: { location } } }}
-        >
-          Reviews
-        </NavLink>
+      <nav className={navigation}>
+        <h3 className={navigationTitle}>Additional information</h3>
+        <ul className={navigationList}>
+          <li>
+            {" "}
+            <NavLink
+              onClick={() => {
+                scroll.scrollToBottom();
+              }}
+              className={navigationItem}
+              activeClassName={navigationItemActive}
+              to={{ pathname: `${url}/cast`, state: { from: { location } } }}
+            >
+              Cast
+            </NavLink>
+          </li>
+          <li>
+            {" "}
+            <NavLink
+              onClick={() => {
+                scroll.scrollToBottom();
+              }}
+              className={navigationItem}
+              activeClassName={navigationItemActive}
+              to={{ pathname: `${url}/reviews`, state: { from: { location } } }}
+            >
+              Reviews
+            </NavLink>
+          </li>
+        </ul>
       </nav>
       <Suspense fallback={<Spinner />}>
         <Switch>

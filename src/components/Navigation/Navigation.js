@@ -30,7 +30,6 @@ const Navigation = () => (
         <li>
           <NavLink
             to="/movies"
-            exact
             className={navigationItem}
             activeClassName={navigationItemActive}
           >

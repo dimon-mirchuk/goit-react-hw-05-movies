@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
-import ShowMore from "react-simple-show-more";
 import { getMovieReviews } from "../../services/ServiceAPI";
+import ShowMoreText from "react-show-more-text";
+import styles from "./Reviews.module.css";
+
+const { reviewList, reviewItem, reviewAuthor, reviewText } = styles;
 
 const Reviews = ({ movieId }) => {
   const [reviews, setReviews] = useState([]);
@@ -23,20 +26,11 @@ const Reviews = ({ movieId }) => {
   return (
     <>
       {reviews.length > 0 ? (
-        <ul>
+        <ul className={reviewList}>
           {reviews.map(({ id, author, content }) => (
-            <li key={id}>
-              <h3>{`Author: ${author}`}</h3>
-              <ShowMore
-                text={content}
-                length={500}
-                showMoreLabel=" Show more >>"
-                showLessLabel=" Show less <<"
-                style={{
-                  cursor: "pointer",
-                  fontWeight: "bold",
-                }}
-              />
+            <li key={id} className={reviewItem}>
+              <h3 className={reviewAuthor}>{`Author: ${author}`}</h3>
+              <p className={reviewText}>{content}</p>
             </li>
           ))}
         </ul>

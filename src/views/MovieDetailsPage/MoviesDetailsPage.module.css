@@ -14,7 +14,59 @@
 
 .filmContainer {
   margin: -30px auto 0 auto;
-  width: 800px;
+  width: 900px;
   display: flex;
-  background-color: tomato;
+  /* background-color: rgb(234, 0, 66); */
+}
+
+.filmDescription {
+  padding: 15px 0 0 15px;
+}
+
+.filmTitle {
+  font-size: 28px;
+  padding-bottom: 30px;
+}
+
+.filmText {
+  padding-bottom: 30px;
+}
+
+.userSore {
+  color: white;
+}
+
+.filmCaption {
+  padding-bottom: 7px;
+}
+
+.navigation {
+  padding: 20px 0 30px 0;
+  border-top: 1px solid rgb(234, 0, 66);
+  border-bottom: 1px solid rgb(234, 0, 66);
+}
+
+.navigationTitle {
+  text-align: center;
+}
+
+.navigationList {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px 0 5px 0;
+}
+
+.navigationItem {
+  margin-left: 20px;
+  font-size: 22px;
+}
+
+.navigationItem:hover {
+  color: #fff;
+}
+
+.navigationItemActive {
+  composes: navigationItem;
+  color: #fff;
+  border-bottom: 2px solid rgb(234, 0, 66);
 }

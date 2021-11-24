@@ -1,0 +1,14 @@
+.reviewList {
+  margin-top: 15px;
+}
+.reviewItem {
+  margin-bottom: 15px;
+}
+
+.reviewAuthor {
+  font-weight: 500;
+}
+
+.reviewText {
+  margin-top: 10px;
+}
