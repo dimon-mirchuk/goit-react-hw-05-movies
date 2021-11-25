@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import { getMovieReviews } from "../../services/ServiceAPI";
-import ShowMoreText from "react-show-more-text";
 import styles from "./Reviews.module.css";
 
 const { reviewList, reviewItem, reviewAuthor, reviewText } = styles;
@@ -15,7 +14,6 @@ const Reviews = ({ movieId }) => {
         if (data.results.length === 0) {
           toast.info("Sorry, reviews is not available");
         }
-        console.log(data.results);
         setReviews(data.results);
       })
       .catch((error) =>

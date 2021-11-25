@@ -32,7 +32,7 @@ const HomePage = () => {
                 <Link
                   to={{
                     pathname: `${url}movies/${id}`,
-                    state: { from: { location } },
+                    state: { from: location },
                   }}
                 >
                   <img

@@ -54,12 +54,7 @@ const MovieDetails = () => {
   }, [movieId]);
 
   const onGoBack = () => {
-    console.log(location.state.from);
-    if (location.state?.from.location) {
-      history.push(location.state.from.location);
-      return;
-    }
-    history.push(location.state.from);
+    history.push(location?.state?.from ?? "/");
   };
 
   const { poster_path, title, genres, vote_average, overview } = movie;
@@ -111,7 +106,10 @@ const MovieDetails = () => {
               }}
               className={navigationItem}
               activeClassName={navigationItemActive}
-              to={{ pathname: `${url}/cast`, state: { from: { location } } }}
+              to={{
+                pathname: `${url}/cast`,
+                state: { from: location?.state?.from },
+              }}
             >
               Cast
             </NavLink>
@@ -124,7 +122,10 @@ const MovieDetails = () => {
               }}
               className={navigationItem}
               activeClassName={navigationItemActive}
-              to={{ pathname: `${url}/reviews`, state: { from: { location } } }}
+              to={{
+                pathname: `${url}/reviews`,
+                state: { from: location?.state?.from },
+              }}
             >
               Reviews
             </NavLink>
