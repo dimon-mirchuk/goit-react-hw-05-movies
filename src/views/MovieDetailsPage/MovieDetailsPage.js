@@ -102,7 +102,7 @@ const MovieDetails = () => {
             {" "}
             <NavLink
               onClick={() => {
-                scroll.scrollToBottom();
+                scroll.scrollTo(750);
               }}
               className={navigationItem}
               activeClassName={navigationItemActive}
@@ -118,7 +118,7 @@ const MovieDetails = () => {
             {" "}
             <NavLink
               onClick={() => {
-                scroll.scrollToBottom();
+                scroll.scrollTo(750);
               }}
               className={navigationItem}
               activeClassName={navigationItemActive}
