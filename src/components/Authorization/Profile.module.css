@@ -1,0 +1,17 @@
+.userInfo {
+  display: flex;
+}
+.userAvatar {
+  height: 58px;
+}
+.userName {
+}
+.userEmail {
+}
+
+.userWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+}

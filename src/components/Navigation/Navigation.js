@@ -1,8 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import styles from "./Navigation.module.css";
 import { ReactComponent as Logo } from "../../images/logo.svg";
+import LoginBtn from "../Authorization/LoginBtn";
 
 const {
+  header,
   navigation,
   logo,
   navigationList,
@@ -11,7 +13,7 @@ const {
 } = styles;
 
 const Navigation = () => (
-  <header>
+  <header className={header}>
     <nav className={navigation}>
       <Link to="/" className={logo}>
         <Logo />
@@ -38,6 +40,7 @@ const Navigation = () => (
         </li>
       </ul>
     </nav>
+    <LoginBtn />
   </header>
 );
 
